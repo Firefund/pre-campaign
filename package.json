@@ -1,0 +1,17 @@
+{
+  "name": "pre-campaign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "purgecss -css bundle.css -con Page1.html -o optimizedBundle.css -keyframes"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "image2base64-cli": "^2.4.1",
+    "purgecss": "^4.0.3"
+  }
+}
