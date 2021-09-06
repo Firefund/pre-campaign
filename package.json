@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "optimizeCSS": "purgecss -css bundle.css -con Page1.html -o optimizedBundle.css -keyframes",
-    "base64Encode": "./bin/image2base64 t-stoa60.jpg --json | jq '.[0]|.base64' > foo.base64"
+    "base64Encode": "./bin/image2base64 t-stoa60.jpg --json | jq '.[0]|.base64' > t-stoa60.base64"
   },
   "keywords": [],
   "author": "",
