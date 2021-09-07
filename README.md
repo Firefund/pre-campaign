@@ -30,7 +30,7 @@ Pros:
 + Has very good process insights.
 + Lots of configuration options.
 + JavaScript errors are available in the process logs.
-+ Creates table of content based H tags.
++ Creates table of content based on H tags.
 
 Cons:
 + No support for HTML form input elements!
