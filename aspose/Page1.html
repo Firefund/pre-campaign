@@ -5,15 +5,18 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>PDF Test</title>
-	<!-- <link rel="stylesheet" href="/css/bundle.css"> -->
+	<!-- <base href=https://www.firefund.net>
+	<link rel="stylesheet" href="css/bundle.css"> -->
 	<link rel="stylesheet" href="optimizedBundle.css">
 	<style>
-		body { position:relative; }
+		/* 794px x 1123px in 96 DPI */
+		@page { size: A4; }
 
+		body { position:relative; }
 		#arrow {
 			position: absolute;
-			/* top: 560px;
-			right: 170px; */
+			top: 12cm;
+			left: 10cm;
 			height:100px;
 
 			/* transform: rotate(0deg); */
@@ -31,8 +34,6 @@
 		}
 	</style>
 	<script>
-		'use strict';
-
 		function div2 (n) {
 			return n / 2
 		}
@@ -47,7 +48,7 @@
 	</script>
 </head>
 
-<body class="f-content" onload="placeArrow()">
+<body class="f-content">
 	<h1 class="f-huge-heading">Campaign Checklist</h1>
 	<section class="f-info-card">
 		<span class="f-info-card_number">1</span>

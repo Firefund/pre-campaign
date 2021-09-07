@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "optimizeCSS": "purgecss --css assets/bundle.css --content aspose/Page1.html --output aspose/optimizedBundle.css -keyframes",
-    "bundle": "mkdir --parents aspose/assets && cp --recursive --update assets/fonts aspose/assets && zip --junk-paths build/Page1 aspose/*",
+    "bundle": "mkdir --parents aspose/assets && cp --recursive --update assets/fonts aspose/assets && cd aspose && zip --recurse-paths ../build/Page1.zip *",
     "aspose": "npm run optimizeCSS && npm run bundle",
     "raptor": "NODE_ENV=dev node docRaptor/convert.mjs"
   },
