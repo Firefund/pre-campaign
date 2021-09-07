@@ -5,14 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "optimizeCSS": "purgecss --css assets/bundle.css --content page1/Page1.html --output page1/optimizedBundle.css -keyframes",
-    "bundle": "mkdir --parents page1/assets && cp --recursive --update assets/fonts page1/assets && zip --junk-paths build/Page1 page1/*",
-    "build": "npm run optimizeCSS && npm run bundle"
+    "optimizeCSS": "purgecss --css assets/bundle.css --content aspose/Page1.html --output aspose/optimizedBundle.css -keyframes",
+    "bundle": "mkdir --parents aspose/assets && cp --recursive --update assets/fonts aspose/assets && zip --junk-paths build/Page1 aspose/*",
+    "aspose": "npm run optimizeCSS && npm run bundle",
+    "raptor": "NODE_ENV=dev node docRaptor/convert.mjs"
   },
   "keywords": [],
-  "author": "",
+  "author": "dotnetCarpenter",
   "license": "ISC",
   "dependencies": {
+    "config": "^3.3.6",
+    "node-fetch": "^3.0.0",
     "purgecss": "^4.0.3"
   }
 }

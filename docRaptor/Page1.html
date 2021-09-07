@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>PDF Test</title>
-	<!-- <link rel="stylesheet" href="bundle.css"> -->
-	<link rel="stylesheet" href="optimizedBundle.css">
+	<base href="https://www.firefund.net">
+	<link rel="stylesheet" href="/css/bundle.css">
 	<style>
-		body { position:relative; }
+		@page { size: A4; }
 
+		body { position:relative; }
 		#arrow {
 			position: absolute;
-			/* top: 560px;
-			right: 170px; */
+			top: 9.1cm;
+    	left: 6.8cm;
 			height:100px;
 
 			/* transform: rotate(0deg); */
@@ -31,28 +31,13 @@
 			font-size: 4.6rem;
 		}
 	</style>
-	<script>
-		'use strict';
-
-		function div2 (n) {
-			return n / 2
-		}
-		function placeArrow () {
-			var arrow = document.getElementById('arrow');
-			var arrowBox = arrow.getBoundingClientRect();
-			var highlightBox = document.getElementById('highlight').getBoundingClientRect();
-
-			arrow.style.top = highlightBox.top - div2 (arrowBox.height) + div2 (highlightBox.height) + 'px';
-			arrow.style.left = highlightBox.width + div2 (arrowBox.width) + 'px';
-		}
-	</script>
 </head>
 
-<body class="f-content" onload="placeArrow();">
+<body class="f-content">
 	<h1 class="f-huge-heading">Campaign Checklist</h1>
 	<section class="f-info-card">
-		<h2 class="f-info-card_number">1</h2>
-		<h2 class="f-info-card_heading">TITLE</h1>
+		<span class="f-info-card_number">1</span>
+		<h2 class="f-info-card_heading">TITLE</h2>
 		<hr class="f-info-card_line">
 		<br>
 		<p class="f-info-card_text">Your project should have a title, something a la “Support ...” or “Fund ...” or whatever –
@@ -66,7 +51,7 @@
 
 	<div class="f-thumbnail">
 		<a href="#">
-			<img class="f-thumbnail__image"	src="t-stoa60.jpg" />
+			<img class="f-thumbnail__image"	src="assets/image/t-stoa60.jpg" />
 		</a>
 		<div class="f-thumbnail__info">
 			<div class="f-thumbnail__content">
@@ -79,9 +64,8 @@
 				</p>
 			</div>
 
-			<p class="f-thumbnail__conclusion">
-				success
-			</p>
+			<p class="f-thumbnail__conclusion">success</p>
+
 			<section class="f-thumbnail__progress" data-value="127">
 				<div class="f-thumbnail__progress__bar">
 					<div style="width:100%;" class="f-thumbnail__progress__value"></div>
@@ -100,6 +84,13 @@
 			</section>
 		</div>
 	</div>
+
+	<div class="f-text-input">
+		<label class="f-text-input__label">Title:
+			<input class="f-text-input__text-field" type="text">
+		</label>
+	</div>
+
 	<svg id="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.514 27.777">
 		<g transform="translate(-425.76 -77.465)">
 			<path stroke-linejoin="round" d="m440.51 104.37v-5.352h20.89v-15.299h-20.89v-5.379l-13.87 13.029 13.87 13.001z" />

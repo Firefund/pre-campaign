@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PDF Test</title>
+	<!-- <link rel="stylesheet" href="/css/bundle.css"> -->
+	<link rel="stylesheet" href="optimizedBundle.css">
+	<style>
+		body { position:relative; }
+
+		#arrow {
+			position: absolute;
+			/* top: 560px;
+			right: 170px; */
+			height:100px;
+
+			/* transform: rotate(0deg); */
+			z-index: 1000;
+		}
+		#arrow path {
+			fill: #ac1c1a;
+			stroke-width:0px;
+		}
+
+		/* Overrides for print */
+		.f-huge-heading {
+			margin: 2rem 0;
+			font-size: 4.6rem;
+		}
+	</style>
+	<script>
+		'use strict';
+
+		function div2 (n) {
+			return n / 2
+		}
+		function placeArrow () {
+			var arrow = document.getElementById('arrow');
+			var arrowBox = arrow.getBoundingClientRect();
+			var highlightBox = document.getElementById('highlight').getBoundingClientRect();
+
+			arrow.style.top = highlightBox.top - div2 (arrowBox.height) + div2 (highlightBox.height) + 'px';
+			arrow.style.left = highlightBox.width + div2 (arrowBox.width) + 'px';
+		}
+	</script>
+</head>
+
+<body class="f-content" onload="placeArrow()">
+	<h1 class="f-huge-heading">Campaign Checklist</h1>
+	<section class="f-info-card">
+		<span class="f-info-card_number">1</span>
+		<h2 class="f-info-card_heading">TITLE</h2>
+		<hr class="f-info-card_line">
+		<br>
+		<p class="f-info-card_text">Your project should have a title, something a la “Support ...” or “Fund ...” or whatever –
+			The title
+			will be shown, in top of the page on the Banner, on the frontpage in the small “thumbnail”
+			linking to your campaign page and in the tab where the campaign is open, it will also be used
+			in the URL itself (e.i. <a href="https://www.firefund.net/fundthefilm">www.firefund.net/fundthefilm</a>)
+		</p>
+	</section>
+
+
+	<div class="f-thumbnail">
+		<a href="#">
+			<img class="f-thumbnail__image"	src="t-stoa60.jpg" />
+		</a>
+		<div class="f-thumbnail__info">
+			<div class="f-thumbnail__content">
+				<a id="highlight" class="f-thumbnail__heading" href="#">
+					Support Lorem Ipsum Dolor Sit Amet!
+				</a>
+				<p class="f-thumbnail__text">
+					<br>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ullam sed modi eum eius quisquam, hic consequuntur doloremque accusantium et tempora similique, placeat, commodi fugiat. Tenetur provident, ratione unde temporibus mollitia blanditiis.
+				</p>
+			</div>
+
+			<p class="f-thumbnail__conclusion">
+				success
+			</p>
+			<section class="f-thumbnail__progress" data-value="127">
+				<div class="f-thumbnail__progress__bar">
+					<div style="width:100%;" class="f-thumbnail__progress__value"></div>
+				</div>
+				<div class="f-thumbnail__progress__data">
+					<p class="f-thumbnail__progress__data-element">
+						<span>127%</span> of €1500
+					</p>
+					<p class="f-thumbnail__progress__data-element">
+						<span>€1911</span> pledged
+					</p>
+					<p class="f-thumbnail__progress__data-element">
+						<span>2020-10-06</span>
+					</p>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<div class="f-text-input">
+		<label class="f-text-input__label">Title:
+			<input class="f-text-input__text-field" type="text">
+		</label>
+	</div>
+
+	<svg id="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.514 27.777">
+		<g transform="translate(-425.76 -77.465)">
+			<path stroke-linejoin="round" d="m440.51 104.37v-5.352h20.89v-15.299h-20.89v-5.379l-13.87 13.029 13.87 13.001z" />
+		</g>
+	</svg>
+</body>
+</html>

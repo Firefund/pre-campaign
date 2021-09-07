@@ -1,2 +1,3 @@
 node_modules/
-page1/assets/
+aspose/assets/
+config/dev.json5
